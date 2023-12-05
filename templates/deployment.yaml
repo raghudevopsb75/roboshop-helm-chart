@@ -50,4 +50,5 @@ spec:
               port: {{ .Values.service.targetPort }}
             initialDelaySeconds: 10
             periodSeconds: 5
-          resources: {{ .Values.resources }}
+          resources:
+            {{ .Values.resources | nindent 12 }}
